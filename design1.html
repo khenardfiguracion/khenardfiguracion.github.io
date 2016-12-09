@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head><title>Title | Super Title</title>
+         
+     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	 
+  <link rel="shortcut icon" type="image/x-icon" href="images/x.ico" />
+	  <script src="bootstrap/js/jquery.min.js"></script>  
+	 <script src="bootstrap/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+<style>
+
+             @font-face{
+            font-family:myfont;
+            src:url(fo.otf);
+        }   
+		 @font-face{
+            font-family:myfont1;
+            src:url(fo2.ttf);
+        }  
+ @font-face{
+            font-family:myfont2;
+            src:url(fo3.otf);
+        }  
+ @font-face{
+            font-family:myfont3;
+            src:url(fo4.otf);
+        }  		
+           
+body{ 
+
+}
+.ch1{
+padding:10px;
+border:0px solid black;
+font-family:myfont2;
+font-size:9em;
+text-align:center;
+}
+a{
+color:black;
+font-family:myfont3;
+padding:13px;
+font-size:1em;
+text-decoration:none;
+transition:all 0.5s ease-in-out;
+}
+
+a:hover{
+background-color:black;
+color:white;
+text-decoration:none;
+font-size:1em;
+}
+.h{
+
+}
+.qq{
+font-family:myfont3;
+}
+.s{
+
+}
+
+#diamond{
+width:0;
+height:0;
+border:50px solid transparent;
+border-bottom-color:red;
+position:relative;
+top:-50px;
+}
+#diamond:after{
+content:";
+position:absolute;
+left:-50px;
+top:50px;
+width:0;
+height:0;
+border:50px solid transparent;
+border-bottom-color:red;
+
+}
+.na{
+font-size:0.7em;}
+.pp{
+font-family:myfont3;
+border:1px solid black;
+padding:10px;
+text-align:center;
+}
+h4{
+font-size:1.3em;
+font-family:myfont3;
+}
+.amm{
+font-size:1em;}
+
+#act{
+background-color:black;
+color:white;
+text-decoration:none;
+font-size:1em;
+}
+
+</style>
+<script>
+
+$(function(){
+	$(".profile").hide();
+	
+	$(".works").hide();
+	
+	$(".bio").hide();
+	$(".family").hide();
+	$(".educ").hide();
+	
+	$(".contacts").hide();
+	
+	$(".skills").hide();
+	
+	$(".bb").click(function(){
+	$(".bio").slideToggle("slow");
+	$(".family").hide();
+	$(".educ").hide();
+	$(".skills").hide();
+	});
+	
+
+	
+	
+	$(".f").click(function(){
+	$(".family").slideToggle("slow");
+	$(".bio").hide();
+	$(".educ").hide();
+	$(".skills").hide();
+	});
+	$(".e").click(function(){
+	$(".educ").slideToggle("slow");
+	$(".family").hide();
+	$(".bio").hide();
+	$(".skills").hide();
+	});
+	
+	
+	$(".ski").click(function(){
+	$(".skills").slideToggle("slow");
+	$(".family").hide();
+	$(".educ").hide();
+	$(".bio").hide();
+	});
+	
+	$(".pr").click(function(){
+	$(".bgimg").css("opacity", "0.2");
+	$(".profile").show("slow");
+	$(".s").hide();
+	$(".contacts").hide();
+	$(".works").hide();
+	});
+		$(".c").click(function(){
+	$(".bgimg").css("opacity", "0.2");
+		$(".contacts").show("slow");
+	$(".s").hide();
+	$(".profile").hide();
+	$(".works").hide();
+	
+	});
+	
+		$(".h").click(function(){
+	$(".s").show("slow");
+	$(".bgimg").css("opacity", "1");
+	$(".profile").hide();
+	$(".contacts").hide();
+	$(".works").hide();
+	});
+	
+	$(".w").click(function(){
+	
+	$(".bgimg").css("opacity", "0.2");
+		$(".works").show("slow");
+	$(".profile").hide();
+	$(".contacts").hide();
+	$(".s").hide();
+	});
+	
+	
+	$(".wd").hide();
+	$(".wd1").hide();
+	$(".wd2").hide();
+	
+	$(".wp").click(function(){
+		$(".wp").hide("slow");
+	$(".wd").show("slow");
+	});
+
+	$(".wd").click(function(){
+		$(".wp").show("slow");
+	$(".wd").hide("slow");
+	});
+	
+	$(".wp1").click(function(){
+		$(".wp1").hide("slow");
+	$(".wd1").show("slow");
+	});
+
+	$(".wd1").click(function(){
+		$(".wp1").show("slow");
+	$(".wd1").hide("slow");
+	});
+
+	$(".wp2").click(function(){
+		$(".wp2").hide("slow");
+	$(".wd2").show("slow");
+	});
+
+	$(".wd2").click(function(){
+		$(".wp2").show("slow");
+	$(".wd2").hide("slow");
+	});
+	
+	
+	$(".wd3").hide();
+	
+	$(".wp3").click(function(){
+		$(".wp3").hide("slow");
+	$(".wd3").show("slow");
+	});
+
+	$(".wd3").click(function(){
+		$(".wp3").show("slow");
+	$(".wd3").hide("slow");
+	});
+	
+	$(".wd4").hide();
+	
+	$(".wp4").click(function(){
+		$(".wp4").hide("slow");
+	$(".wd4").show("slow");
+	});
+
+	$(".wd4").click(function(){
+		$(".wp4").show("slow");
+	$(".wd4").hide("slow");
+	});
+	
+	$(".wd5").hide();
+	
+	$(".wp5").click(function(){
+		$(".wp5").hide("slow");
+	$(".wd5").show("slow");
+	});
+
+	$(".wd5").click(function(){
+		$(".wp5").show("slow");
+	$(".wd5").hide("slow");
+	});
+	
+});
+
+</script>
+<img src="img/xx.gif" class="bgimg" width="100%" height="100%" style="position:fixed;opacity:1;">
+<div class="col-sm-12 s"><br>
+
+<div class="col-sm-4">
+<div class="col-sm-12"><br></div>
+<div class="col-sm-12"><br></div>
+<div class="col-sm-12"><br></div>
+<div class="col-sm-12"><br></div>
+<div class="col-sm-6" align="right"><a href="#" class="h" id="act">HOME</a></div>
+<div class="col-sm-6" align="left"><a href="#" class="pr">PROFILE</a></div>
+</div>
+
+<div class="col-sm-4" align="center">
+<div class="col-sm-3"></div>
+<div class="col-sm-6"><h1 class="ch1">K</h1></div>
+</div>
+
+<div class="col-sm-4">
+<div class="col-sm-12"><br></div>
+<div class="col-sm-12"><br></div>
+<div class="col-sm-12"><br></div>
+<div class="col-sm-12"><br></div>
+<div class="col-sm-6"  align="right"><a href="#" class="w">WORKS</a></div>
+<div class="col-sm-6" align="left"><a href="#" class="c">CONTACT</a></div>
+</div>
+
+<div class="col-sm-12" align="center"><hr>
+<h4 class="qq"><q><b>It's not if you can't do it, It's if you want to Do it.</b></q></h4><hr style="position:relative;"></div>
+</div>
+
+
+
+<div class="col-sm-12"><br><br></div>
+
+
+<div class="col-sm-12 profile">
+<div class="col-sm-2 na"><a href="#" class="h">HOME</a><a href="#"  id="act" >PROFILE</a><a href="#" class="w">WORKS</a><a href="#" class="c">CONTACTS</a>
+<div class="col-sm-4 d" style="padding:50px;border-right:0px solid black;">
+<div class="col-sm-6">
+<div class="col-sm-12" class="pp" id="am">
+<h3 style="border-bottom:1px solid black;font-family:myfont3;">ABOUT ME</h3></div>
+<div class="amm">
+<div class="col-sm-12" class="pp"><h4 class="bb">BIO</h4></div>
+<div class="col-sm-12" class="pp"><h4 class="f">FAMILY</h4></div>
+<div class="col-sm-12" class="pp"><h4 class="e">EDUCATION</h4></div>
+</div>
+</div>
+<div class="col-sm-6"><br><br>
+<div class="col-sm-12" class="pp"><h3 style="border-bottom:1px solid black;font-family:myfont3;" class="ski">SKILLS</h3></div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+<div class="col-sm-8" align="left" style="padding-left:50px;">
+<div class="col-sm-1"></div><br><br><br>
+
+
+<div class="col-sm-11">
+<!--<img src="images/mf.jpg" width="200px" height="200px" align="center" style="border-radius:0%;padding:10px;margin-left:10px;"> -->
+<h1 style="font-family:myfont2;" align="left">Khenard Figuracion</h1><br>
+<p style="font-family:myfont3;" align="left">19 Years old Web Designer from Pangasinan PH.</p>
+<hr>
+
+<div class="col-sm-10 bio" id="bb">
+<h1 style="font-family:myfont3;">Bio</h1><br>
+Full Name:&nbsp;Khenard Macanas Figuracion<br>
+Age:&nbsp;19<br>
+Birth date:&nbsp;February 07, 1997<br>
+Gender:&nbsp;Male<br>
+Address:&nbsp;#258 Ma. Cristina Street, Pob. Zone 2 Villasis, Pangasinan(2427)<br>
+</div>
+
+
+
+<div class="col-sm-10 family" id="ff">
+<h1 style="font-family:myfont3;">Family Background</h1><br>
+Mother's Name:&nbsp;Catherine Figuracion<br>
+Age:&nbsp;37<br>
+Occupation:&nbsp;OFW(Singapore)<br><br>
+Father's Name:&nbsp;Edwin Figuracion<br>
+Age:&nbsp;45<br>
+Occupation:&nbsp;Self Employed Vendor<br>
+<br>
+Siblings<br><br>
+Krstine Rose Figuracion<br>
+Age:&nbsp;24<br>
+Kathleen Mae Figuracion(Deceased)<br>
+Kristelle Ann Figuracion<br>
+Age:&nbsp;17<br>
+</div>
+
+<div class="col-sm-10 educ" id="ee">
+<h1 style="font-family:myfont3;">Education</h1><br>
+<h5>ELEMENTARY</h5>
+ School Name: Villasis 1 Central School<br>
+Address:Los Requerdos St. Villasis, Pangasinan<br>
+	Year Graduated:2009<br><br>
+	<h5>Secondary</h5>
+	School Name:Don Ramon E. Costales Memorial NHS<br>
+	Address:Pob. Zone 3 Villasis, Pangasinan<br>
+	Year Graduated:2013<br><br>
+	<h5>Tertiary</h5>
+	School Name:Pangasinan State University<br>
+	Address:Mac Arthur Highway Urdaneta City, Pangasinan<br>
+        Course Taken:BS Information Technology<br>
+	Year:4th Year<br>
+
+</div>
+
+
+<div class="col-sm-10 skills" id="sk">
+<h1 style="font-family:myfont3;">Skills</h1>
+<div class="col-sm-6"><h3>HTML</h3><hr>
+<p>I Love creating and Designing Web Pages, I am very Passionate about it! HTML is the soul of a Web page.</p>
+</div>
+<div class="col-sm-6"><h3>CSS</h3><hr>
+<p>Web Designing is my Passion! I know how to beautify a dull Web page with CSS, it's like Decorating a Stone and turns it into a Rock Statue.</p>
+</div>
+<div class="col-sm-6"><h3>BootStrap</h3><hr>
+<p><p>a Website must be Responsive, PC Mode or Mobile Mode. Thanks to BootStrap.</p>
+</p>
+</div>
+<div class="col-sm-6"><h3>PHP</h3><hr>
+<p>Best Websites need Back- end Programming in order to be fully Functional. PHP is hardly Needed.</p>
+</div>
+<div class="col-sm-6"><h3>JQuery</h3><hr>
+<p>I've used JQuery for this Website and it was awesome!</p>
+</p>
+</div>
+<div class="col-sm-6"><h3>Visual Basic</h3><hr>
+<p>web Based or Form Based, I can Do it with VB.net and ASP.net</p>
+</div><br><br>
+<div class="col-sm-12"></div>
+
+</div>
+
+
+</div>
+
+</div>
+<div class="col-sm-2"><h1 class="ch1" style="position:fixed;">K</h1></div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<div class="col-sm-12"></div>
+
+
+
+
+<div class="col-sm-12 works">
+<div class="col-sm-2 na"><a href="#" class="h">HOME</a><a href="#" class="pr">PROFILE</a><a href="#" id="act">WORKS</a><a href="#" class="c">CONTACTS</a></div>
+<div class="col-sm-8" align="left" style="padding-left:50px;">
+<div class="col-sm-8"><br><br><br><h1 style="font-family:myfont3;">PROJECTS</h1></hr></div>
+<div class="col-sm-2"><h1 class="ch1" style="">K</h1></div>
+
+<div class="col-sm-12 wp">
+<h4 align="center"><img src="images/p1.png" align="center" style="border-radius:50%;width:150px;height:150px;"><br><br>PSUDMS</h4></div>
+<div class="col-sm-12 wd"><img src="images/p1.png" align="right" style="border-radius:50%;width:200px;height:200px;"><br><br><h2>PSUDMS</h2><hr>
+<p>A Web-based Document Management System for Pangasinan State University All Campuses Done in PHP and Mysql Database in the completion for THESIS (ASD 1).</p>
+</div>
+
+
+<div class="col-sm-12 wp1">
+<h4 align="center"><img src="images/p2.png" align="center" style="border-radius:50%;width:150px;height:150px;"><br><br>Online ordering system</h4></div>
+<div class="col-sm-12 wd1"><img src="images/p2.png" align="left" style="border-radius:50%;width:200px;height:200px;"><br><br><h2>Online ordering system</h2><hr>
+<p>A Web-Based Online Ordering System for a Souvenir Shop Done in PHP and Mysql Database in the completion for DBMS2.</p>
+</div>
+
+<div class="col-sm-12 wp2">
+<h4 align="center"><img src="images/p3.png" align="center" style="border-radius:50%;width:150px;height:150px;"><br><br>Chatter Box(ASP)</h4></div>
+<div class="col-sm-12 wd2"><img src="images/p3.png" align="right" style="border-radius:50%;width:200px;height:200px;"><br><br><h2>Chatter Box(ASP)</h2><hr>
+<p>An interactive Online Forum for everyone, It allows user to Communicate to other people by posting with a Particular Topic and Personal Messages Done in Asp.net andMS Access Database in the completion for ELECTIVE 2.</p>
+</div>
+
+
+<div class="col-sm-12 wp3">
+<h4 align="center"><img src="images/p5.png" align="center" style="border-radius:50%;width:150px;height:150px;"><br><br>Chatter Box(PHP)</h4></div>
+<div class="col-sm-12 wd3"><img src="images/p5.png" align="left" style="border-radius:50%;width:200px;height:200px;"><br><br><h2>Chatter Box(PHP)</h2><hr>
+<p>An interactive Online Forum for everyone, It allows user to Communicate to other people by posting with a Particular Topic and Personal Messages Done in PHP and Mysql Database in the completion for ELECTIVE 3.</p>
+</div>
+
+
+
+<div class="col-sm-12 wp4">
+<h4 align="center"><img src="images/p4.png" align="center" style="border-radius:50%;width:150px;height:150px;"><br><br>PSULS + </h4></div>
+<div class="col-sm-12 wd4"><img src="images/p4.png" align="right" style="border-radius:50%;width:200px;height:200px;"><br><br><h2>PSULS + </h2><hr>
+<p>Library Management System for Pangasinan State University Urdaneta Campus Done in VB.net 2010 and MS Ascess Database in the completion for DBMS1.</p>
+</div>
+
+
+<div class="col-sm-12 wp5">
+<h4 align="center"><img src="images/p61.png" align="center" style="border-radius:50%;width:150px;height:150px;"><br><br>Sales and Monitoring Management System</h4></div>
+<div class="col-sm-12 wd5"><img src="images/p61.png" align="left" style="border-radius:50%;width:200px;height:200px;"><br><br><h2>Sales and Monitoring Management System</h2><hr>
+<p>Sales and Inventory Management System for NorthCare Medical Pharmacy Done in VB.net 2010 and MS Ascess Database in the completion for Software Engineering.</p></div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+<div class="col-sm-12 contacts">
+<div class="col-sm-2 na"><a href="#" class="h">HOME</a><a href="#" class="pr">PROFILE</a><a href="#" class="w">WORKS</a><a href="#"   id="act"  class="c">CONTACTS</a></div>
+
+<div class="col-sm-8">
+
+
+<div class="col-sm-12" >
+<div class="col-sm-2"style="padding:5px;">
+</div>
+<div class="col-sm-8">
+<br><br>
+<h1 style="font-family:myfont3;" align="center">CONTACT ME</h1>
+<hr>
+
+
+<div class="col-sm-6">
+<h1 align="center"><img src="images/fb.png" style="border-radius:50%;" width="100px" height="100px"></h1>
+<div align="center">
+<h3>Facebook</h3>
+www.facebook.com/figuracion.khenard
+
+</div>
+</div>
+
+<div class="col-sm-6" >
+<h1 align="center"><img src="images/ym.png" style="border-radius:50%;" width="100px" height="100px"></h1>
+<div align="center">
+<h3>Yahoo Mail</h3>
+khenemfie13@yahoo.com
+
+</div>
+</div>
+
+<div class="col-sm-6" >
+<h1 align="center"><img src="images/gmm.png" style="border-radius:50%;" width="100px" height="100px"></h1>
+<div align="center">
+<h3>GMail</h3>
+khenemfie13@gmail.com
+
+</div>
+</div>
+<div class="col-sm-6" >
+<h1 align="center"><img src="images/da.png" style="border-radius:50%;" width="100px" height="100px"></h1>
+<div align="center">
+<h3>Deviant Art</h3>
+khenemfie13 / Khen13
+
+</div>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="col-sm-2"><h1 class="ch1" style="position:fixed;" align="center">K</h1></div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

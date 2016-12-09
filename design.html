@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head><title>Title | Super Title</title>
+         
+     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	 
+  <link rel="shortcut icon" type="image/x-icon" href="images/x.ico" />
+	  <script src="bootstrap/js/jquery.min.js"></script>  
+	 <script src="bootstrap/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+<style>
+
+             @font-face{
+            font-family:myfont;
+            src:url(fo.otf);
+        }   
+		 @font-face{
+            font-family:myfont1;
+            src:url(fo2.ttf);
+        }  
+ @font-face{
+            font-family:myfont2;
+            src:url(fo3.otf);
+        }  
+ @font-face{
+            font-family:myfont3;
+            src:url(fo4.otf);
+        }  		
+            @font-face{
+            font-family:myfont5;
+            src:url(fo5.ttf);
+        }  		
+           
+body{ padding:0px;
+background-color:black;
+background-size:cover;
+margin:0px;
+
+}
+
+		   @font-face{
+            font-family:myfont6;
+            src:url(fo6.otf);
+        }  		
+
+</style>
+<script>
+
+$(function(){
+	
+
+$(".box").click(function(){
+		var div = $(".box");
+        	var div2 = $(".lin");
+		div.animate({left: '100px'}, "slow");
+div.animate({height: '300px', opacity: '0.4'}, "slow");
+div.animate({width: '85%', opacity: '0.8'}, "slow");
+div.animate({right: '100px'}, "slow");
+
+});
+$(".h").click(function(){
+		var div = $(".h");
+        	var div2 = $(".box");
+		div.animate({left: '100px'}, "slow");
+
+div2.animate({width: '85%', opacity: '0.8'}, "slow");
+div.animate({width: '85%', opacity: '0.8'}, "slow");
+div.animate({right: '100px'}, "slow");
+div.animate({height: '10px', opacity: '0.4'}, "toggle");
+div2.animate({height: '20px', opacity: '0.4'}, "toggle");
+});
+
+
+});
+
+</script>
+
+
+
+
+
+<div class="col-sm-8 box" style="background-color:white;width:50px;height:50px;">
+    <div class="col-sm-8"></div>
+        <div class="col-sm-4 lin" style="background-color:green;width:50px;height:50px;"></div>
+      <div class="col-sm-8 h" style="background-color:blue;width:50px;height:50px;"></div>
+</div>
+<br><br>
+<center><br><br><br>
+<div class=" bb" style="background-image:url('img/3.jpg');background-size:cover;width:550px;height:550px;border:3px solid blue;transform:rotateZ(136deg);">
+<img src="img/1.jpg" height="100%" width="100%" style="transform:rotateZ(0deg)s;">
+    </div>
+</center>
+</body>
+</html>	

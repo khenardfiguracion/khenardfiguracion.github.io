@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head><title>Title | Super Title</title>
+         
+     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	 
+  <link rel="shortcut icon" type="image/x-icon" href="images/x.ico" />
+	  <script src="bootstrap/js/jquery.min.js"></script>  
+	 <script src="bootstrap/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+<style>
+#hexagon{
+width:100px;
+height:55px;
+background:red;
+position:relative;
+}
+
+#hexagon:before{
+content:"";
+position:absolute;
+top:-25px;
+left:0;
+width:0;
+height:0;
+border-left:50px solid  transparent;
+border-right:50px solid  transparent;
+border-bottom:25px solid  red;
+}
+
+
+#hexagon:after{
+content:"";
+position:absolute;
+bottom:-25px;
+left:0;
+width:0;
+height:0;
+border-left:50px solid  transparent;
+border-right:50px solid  transparent;
+border-bottom:25px solid  red;
+}
+
+        
+</style>
+
+
+<div id="hexagon"><div id="hexagon">
+</div>
+</div><div id="hexagon">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head><title>Title | Super Title</title>
+         
+     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	 
+  <link rel="shortcut icon" type="image/x-icon" href="images/x.ico" />
+	  <script src="bootstrap/js/jquery.min.js"></script>  
+	 <script src="bootstrap/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+<style>
+
+             @font-face{
+            font-family:myfont;
+            src:url(fo.otf);
+        }   
+		 @font-face{
+            font-family:myfont1;
+            src:url(fo2.ttf);
+        }  
+ @font-face{
+            font-family:myfont2;
+            src:url(fo3.otf);
+        }  
+ @font-face{
+            font-family:myfont3;
+            src:url(fo4.otf);
+        }  		
+           
+body{ 
+
+}
+.ch1{
+padding:10px;
+border:0px solid black;
+font-family:myfont2;
+font-size:9em;
+text-align:center;
+}
+
+
+.h{
+background-color:black;
+color:white;
+}
+</style>
+<script>
+
+$(function(){
+	
+
+	$(".btn").click(function(){
+		var div = $(".x");
+		div.animate({left: '100px'}, "slow");
+div.animate({fontSize: '3em'}, "slow");
+div.animate({height: '300px', opacity: '0.4'}, "slow");
+div.animate({width: '300px', opacity: '0.8'}, "slow");
+div.animate({height: '100px', opacity: '0.4'}, "slow");
+div.animate({width: '100px', opacity: '0.8'}, "slow");
+div.animate({height: '50px', opacity: '0.4'}, "slow");
+div.animate({width: '50px', opacity: '0.8'}, "slow");
+div.animate({height: '10px', opacity: '0.4'}, "slow");
+div.animate({width: '10px', opacity: '0.8'}, "slow");
+div.animate({height: '0px', opacity: '0.4'}, "slow");
+div.animate({width: '0px', opacity: '0.8'}, "slow");
+	});
+	
+	$(".fd").click(function(){
+$(".d").toggleClass("h", "slow");
+});
+
+$(".tt").click(function(){
+$("p").hide("slow", function(){
+alert("The paragraph is now hidden");
+});
+
+});
+
+$(".at").click(function(){
+var txt1=document.createElement("marquee");
+txt1.innerHTML="SURPRISE MOTHER FUCKS";
+$(".q").append(txt1);
+});
+
+
+$(".att").click(function(){
+var t =$("#ttx").val();
+var txt1=$("<marquee behavior='alternate' direction='right'></marquee>").text(t);
+$(".ee").append(txt1);
+});
+
+$(".att2").click(function(){
+var t =$("#ttx2").val();
+var txt1=$("<marquee behavior='alternate' direction='left'></marquee>").text(t);
+$(".ee2").append(txt1);
+});
+
+});
+
+</script>
+<button class="btn btn-info f">CLICK ME</button>
+<div class="x" style="background-color:black;color:white;width:100%;height:100px;">SURPRISE MOTHERFUCKER!</div>
+<br>
+<button class="fd">CLICK ME</button>
+<div class="d">fgdg</div>
+
+<button class="tt">CLICK ME</button>
+<p>SURPRISE MOTHERFUCKER!</p>
+
+
+
+
+<button class="at">ADD ELEMENT(Marquee)</button><br>
+<q class=".q"></q>
+<div class="col-sm-6">
+<input type="text" id="ttx"/><br>
+<button class="att">ADD ELEMENT(Marquee diff way)</button><br>
+<q class="ee"></q><q class="ee"></q><q class="ee"></q>
+</div>
+
+<div class="col-sm-6">
+<input type="text" id="ttx2"/><br>
+<button class="att2">ADD ELEMENT(Marquee diff way)</button><br>
+<q class="ee2"></q>
+</div>
+</body>
+</html>

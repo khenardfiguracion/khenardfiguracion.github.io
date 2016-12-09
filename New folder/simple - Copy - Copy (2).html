@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head><title>Title | Super Title</title>
+         
+     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	 
+  <link rel="shortcut icon" type="image/x-icon" href="images/x.ico" />
+	  <script src="bootstrap/js/jquery.min.js"></script>  
+	 <script src="bootstrap/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+<style>
+
+             @font-face{
+            font-family:myfont;
+            src:url(fo.otf);
+        }   
+		 @font-face{
+            font-family:myfont1;
+            src:url(fo2.ttf);
+        }  
+ @font-face{
+            font-family:myfont2;
+            src:url(fo3.otf);
+        }  		
+           
+body{ 
+	font-family:myfont;
+	background-color:white;
+	background-size:cover;
+	color:black;
+	padding:7%;
+	font-size:1.3em;
+}
+.cent{
+font-size:15em;
+font-family:myfont2;
+}
+h1{
+font-family:myfont2;
+}
+
+
+</style>
+<script>
+
+$(function(){
+	
+
+	$("#h").hide();
+	$("#p").hide();
+	$("#g").hide();
+	$("#c").hide();
+	
+	$(".ltrigh").hover(function(){
+		$("#h").slideToggle("slow");
+		});
+	$(".ltrigp").hover(function(){
+		$("#p").slideToggle("slow");
+		});
+	$(".ltrigg").hover(function(){
+		$("#g").slideToggle("slow");
+		});
+	$(".ltrigc").hover(function(){
+		$("#c").slideToggle("slow");
+		});
+		
+	
+
+
+});
+</script>
+
+<div class="col-sm-12">
+<div class="col-sm-1" align="left" style="padding:15px;">
+<h1 align="center" style="padding:5px;width:50px;" class="ltrigh">H</h1><b id="h" style="padding:5px; ">HOME</b>
+</div>
+<div class="col-sm-10" ></div>
+<div class="col-sm-1" align="right" style="padding:15px;">
+<h1 align="center" style="padding:5px;width:50px;" class="ltrigp">P</h1><b id="p" style="padding:5px; ">PROFILE</b>
+</div>
+</div>
+
+
+
+<div class="col-sm-4"><br>
+</div>
+
+<div class="col-sm-4" align="center" style="border:0px solid black;padding:5px;text-align:center;background-color:white;opacity:1;position:relative;">
+<h1 style="font-size:6em;" class="cent" align="center">
+THINK <br>OUTSIDE <br>THE <br>BOX</h1>
+</div>
+
+<div class="col-sm-3"></div>
+
+
+<div class="col-sm-12">
+<div class="col-sm-1" align="left" style="padding:15px;">
+<h1 align="center" style="padding:5px;width:50px;" class="ltrigg">G</h1><b id="g" style=";padding:5px; ">GALLERY</b>
+</div>
+<div class="col-sm-10" ></div>
+<div class="col-sm-1" align="right" style="padding:15px;">
+<h1 align="center" style="padding:5px;width:50px;" class="ltrigc">C</h1><b id="c" style="padding:5px; ">CONTACT</b>
+</div></div>
+
+
+<div class="col-sm-12"><br></div>
+<div class="col-sm-12"><br></div>
+
+
+
+
+
+<br><br>
+</body>
+</html>

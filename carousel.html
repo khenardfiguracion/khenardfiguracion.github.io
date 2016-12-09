@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<title>PSU DMS- Document Management made Easy</title>
+<head>    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="bootstrap/js/jquery.min.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="logo.ico" />
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<style>
+body{
+  background: #DCE0DA;
+}
+</style>
+
+
+
+
+
+<nav class="navbar navbar-default  navbar-fixed-top">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynav" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="#">PSU DMS</a>
+</div>
+
+<div class="collapse navbar-collapse" id="mynav">
+
+<ul class="nav navbar-nav">
+<li class="dropdown  active">
+<a href="#" class="dropdown-toggle" aspopup="true" aria-expanded="false">Document Management System made easy.</a>
+<ul class="dropdown-menu">
+<li><a href="profile.php"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Profile&nbsp;</a></li>
+<li><a href="login.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;Log Out&nbsp;</a></li>
+</ul>
+</li>
+</ul>
+
+<ul class="nav navbar-nav navbar-right">
+
+<li class="dropdown active">
+<a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal"  aspopup="true" aria-expanded="false">
+<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;LOGIN</a>
+</li>
+<li>
+<a href="signup.php">
+<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;SIGN UP</a>
+</li>
+<li>
+<a href="sendmessasEx.php">
+<span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;SEND MESSAGE</a>
+</li>
+
+
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+<span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;ARCHIEVE</a>
+</li>
+</ul>
+
+
+</nav>
+
+
+
+
+
+
+
+<!--<a class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="modal" data-target="#myModal" style="position:absolute; top:0; right: 15px;">Login</a>
+-->
+<div id="myModal" class="modal fade" role="dialog">
+<div class="modal-dialog">
+<!-- Modal content-->
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h4 class="modal-title"><span class="badge" style="background-color:blue;">Welcome to PSU Document Management System</span></h4>
+</div>
+<div class="modal-body"><p></p>
+
+
+	<div class="container">
+
+    <div class="row">
+        <div class="col-sm-5">
+            
+                <form id="contact-form" action="index.php" method="post">
+                <div class="row">
+    
+                        <div class="form-group">
+                            <label for="name">
+                               Username: </label>
+                           <input type="text" class="form-control"  name="username"/>
+                        </div>
+						<div class="form-group">
+                            <label for="name">
+                               Password: </label>
+                           <input type="password" class="form-control" name="upass"/>
+                        </div>
+						<div class="form-group">
+                            <label for="name">
+                               <input type="submit" name="login" class= "btn btn-primary" value="LOGIN">
+                        </div>
+                </div>
+                </form>
+				
+        </div>
+    </div></div>
+
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+</div></div></div></div>
+
+
+
+
+
+
+<?php if (isset($_POST['login'])){
+	$user=$_POST['username'];
+	$pwd=$_POST['upass'];
+	require "conn.php";
+	$query=mysql_query("SELECT * from tb_users where user_username='".$user."' and user_pass='".$pwd."'") or die ("error query");
+	
+	if ($query){
+		if (mysql_num_rows($query)>0){
+			while ($row=mysql_fetch_array($query)){
+				session_start();
+				$_SESSION['username']=$row[1];
+				$_SESSION['userid']=$row[0];
+				header("refresh:0.2, url=main.php");
+				}
+		}
+		else{
+			echo "<script>alert('Password mismatch');</script>";
+			header("refresh:0.2, url=index.php");
+		}
+	
+	}
+	
+}
+?>
+
+
+
+
+<div class="jumbotron" style="opacity:1;">
+  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+   
+      <div class="item active">
+	  <img src="images/mainbanner2.gif" alt="Chania" width="100%" height="500">
+        
+         <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div>
+ <div class="item">
+ <img src="images/mainbanner1.jpg" alt="Chania" width="100%" height="500">
+       
+        <div class="carousel-caption">
+          <h3>Chania</h3>
+          <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="images/newbanner1.jpg" alt="Chania" width="100%" height="500">
+        <div class="carousel-caption">
+          <h3>Chania</h3>
+          <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="images/newbanner3.jpg" alt="Flower" width="100%" height="500">
+        <div class="carousel-caption">
+          <h3>Flowers</h3>
+          <p>Beatiful flowers in Kolymbari, Crete.</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="images/newbanner5.jpg" alt="Flower" width="100%" height="500">
+        <div class="carousel-caption">
+          <h3>Flowers</h3>
+          <p>Beatiful flowers in Kolymbari, Crete.</p>
+        </div>
+      </div>
+	     <div class="item">
+        <img src="images/newbanner6.jpg" alt="Flower" width="100%" height="500">
+        <div class="carousel-caption">
+          <h3>Flowers</h3>
+          <p>Beatiful flowers in Kolymbari, Crete.</p>
+        </div>
+      </div>
+	     <div class="item">
+        <img src="images/newbanner9.jpg" alt="Flower" width="100%" height="500">
+        <div class="carousel-caption">
+          <h3>Flowers</h3>
+          <p>Beatiful flowers in Kolymbari, Crete.</p>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!--
+show ng memos
+
+-->
+<div class="col-sm-12" style="padding:1px;">
+<div class="panel panel-default">
+<div class="panel-heading"><span class="glyphicon glyphicon-file"></span>&nbsp;&nbsp;<span class="badge">PSU Memo</span></div>
+<div class="panel-body">
+<table class="table">
+<tr>
+<th>Memo Information</th>
+<th>Date</th>
+<th>Actions</th>
+<th>Downloads</th>
+</tr>
+
+<?php
+
+
+
+
+
+
+?>
+
+
+	<tr>
+	<td><span class="badge" style="background-color:blue;">Extension Program</span><label style="color:green;">PSU Memo</label>-Sample Deployment</td>
+	<td>05/04/2016</td>
+	<td><button class="btn btn-default" name="attachfile" data-toggle="modal" data-target="#filess"><span class="glyphicon glyphicon-save"></span></button>
+	<button class="btn btn-default"name="view" data-toggle="modal" data-target="#viewmessage"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+	<td>23</td>
+	</tr>
+
+	
+	
+	
+	</table>
+
+
+</div>
+</div>
+</div>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
